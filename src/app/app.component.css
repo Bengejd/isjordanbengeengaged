@@ -1,0 +1,251 @@
+
+
+:host {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 8px 0;
+  font-family: initial;
+}
+
+h1.spacer:after, h1.spacer-padded:after {
+  content: " ";
+  display: block;
+  height: 4px;
+  background-color: #ee7d5a;
+  border-radius: 4px;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  /*border-bottom: solid 3px #ee7d5a;*/
+}
+
+h1.spacer-padded:after {
+  margin-bottom: 25px;
+}
+
+.content {
+  display: flex;
+  margin: 16px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #020b26;
+  height: auto;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  font-family: initial;
+}
+
+h1 {
+  padding: 8px;
+}
+
+h1.news {
+  padding-bottom: 16px;
+}
+
+h1.me, h1.her {
+  margin-top: 16px;
+}
+
+h1.name {
+  font-size: 50px;
+  color: #fff;
+  font-weight: bolder;
+  padding: 8px;
+  height: 40px;
+}
+
+h2 {
+  padding-top: 2px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  background-color: #020b26;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: 80%;
+  position: relative;
+  display: block;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+div.long {
+  width: 65%;
+}
+
+a {
+  color: #d3d3d3
+}
+
+.images {
+  /*width: 80vw;*/
+}
+
+img {
+  object-fit: contain;
+  height: 374px;
+  padding: 5px;
+  max-width: 384px;
+}
+
+video, iframe {
+  width: 300px;
+  height: 500px;
+}
+
+div.small {
+  width: 30%;
+}
+
+p {
+  font-size: 18px;
+  font-family: arial, sans-serif;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+.thanks > p {
+  padding: 8px;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h1.news {
+    font-size: 25px;
+  }
+
+  h1.me, h1.her {
+    font-size: 35px;
+  }
+
+  img {
+    max-width: 240px;
+    height: auto;
+  }
+
+  video {
+    max-width: 240px;
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+div.ribbon {
+  height: 32px;
+  width: 35%;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  background-color: #ee7d5a;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ribbon {
+  font-size: 16px !important;
+  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+  position: relative;
+  background: #ee7d5a;
+  color: #fff;
+  text-align: center;
+  /*padding: 1em 2em; !* Adjust to suit *!*/
+  /*margin: 2em auto 3em; !* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. *!*/
+}
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1em solid #ee7d5a;
+  z-index: -1;
+  bottom: 0;
+}
+
+.ribbon:before {
+  left: -2em;
+  border-right-width: 1.5em;
+  border-left-color: transparent;
+}
+
+.ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #ee7d5a transparent transparent transparent;
+  bottom: 0;
+}
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
